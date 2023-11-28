@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!-- Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .Error-msg {
+      color: red;
+      padding: 1px 0 0 3px;
+      font-size: small;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="d-flex flex-row">
+      <div class="col-6 p-5">
+        <h2>Register Here</h2>
+        <form>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="Username"
+              name="name"
+              placeholder="Your Name"
+              required
+              oninput="validateUsername();"
+            />
+            <label for="Username">User Name</label>
+            <span class="Error-msg" id="username-Error">Name Is Required</span>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="name@example.com"
+              required
+              oninput="validateEmail();"
+            />
+            <label for="email">Email address</label>
+            <span class="Error-msg" id="email-Error">Email is Required</span>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="email"
+              placeholder="Password"
+              required
+              autocomplete="new-password"
+              oninput="validatePassword();"
+            />
+            <label for="password">Password</label>
+            <span class="Error-msg" id="password-Error"
+              >Password Is Required</span
+            >
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="password"
+              class="form-control"
+              id="cpassword"
+              name="email"
+              placeholder="cpassword"
+              required
+              autocomplete="new-password"
+              oninput="validateCPassword();"
+            />
+            <label for="cpassword">Confirm Password</label>
+            <span class="Error-msg" id="cpassword-Error">
+              Confirm Your Password</span
+            >
+          </div>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-primary" onclick="register()">
+              Sign Up
+            </button>
+            <a href="login.html" class="btn btn-success">Sign In</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <!-- Bootstrap JavaScript  & jQuery-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!--External JavaScript -->
+  <script src="./assets/Javascript/register.js"></script>
+</html>
